@@ -70,7 +70,24 @@ nnoremap i <Nop>
 set timeoutlen=500 " 映射等待时间减少到 500 毫秒
 set ttimeoutlen=10 " 键码等待时间减少到 10 毫秒
 
-"更改insert模式下切换普通模式的快捷键为Shift+c
-inoremap <S-x> <Esc>
+"更改insert模式下切换普通模式的快捷键为Shift + x + c
+"inoremap <S-x> <Esc>
+function! s:check_for_c()
+    " 等待用户输入下一个字符
+    let l:char = getchar()
+    " 检查字符是否为 'c' 或 'C'
+    if l:char == char2nr('c') || l:char == char2nr('C')
+        " 如果是 'c'，则模拟按下 Esc
+        call feedkeys("\<Esc>")
+    else
+        " 如果不是 'c'，则将之前按下的 'X' 和当前按键插入到文本中
+        call feedkeys('X' . nr2char(l:char), 'n')
+    endif
+endfunction
+
+" 在插入模式下，当按下 'X' 时，调用上面的函数
+inoremap <expr> X '<Esc>:call <SID>check_for_c()<CR>'
+
+
 set backspace=indent,eol,start
 
