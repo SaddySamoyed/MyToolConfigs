@@ -1,0 +1,31 @@
+// commands
+
+// C++ compile
+g++ -Wall -Werror -pedantic -g --std=c++17 -Wno-sign-compare -Wno-comment main.cpp -o main.exe
+
+tar -zxvf <filename.tar.gz> -C <directory>
+
+// 列举include路径
+g++ -v -E -x c++ -
+
+// 解决 VSCode include path 的问题
+添加setting.json 文件, 并添加以下内容:
+{
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13"
+}
+或者 cmd+shift+p, select intellisence configuration, 使用 gcc/g++-13
+
+// in c_cpp_properties_json (Mac: cmd+shift+p打开) (win: ctrl+shift+p打开)
+"includePath": [
+                "${workspaceFolder}/**",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1", 
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+
+
+// 打开 spotlight
+Command (⌘) + Spacebar
+
