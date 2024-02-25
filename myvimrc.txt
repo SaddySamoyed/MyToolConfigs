@@ -15,10 +15,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 "use <tab> for trigger completion and navigate to the next complete item
-
 function! CheckBackSpace() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1] =~ '\s'
@@ -26,7 +26,7 @@ endfunction
 
 inoremap <silent><expr> <Tab> pumvisible() ? coc#pum#confirm() : "\<Tab>"
 
-
+"nerdtree: 工作区
 inoremap <c-b> <Esc>:NERDTreeToggle<cr>
 nnoremap <c-b> <Esc>:NERDTreeToggle<cr>
 
@@ -70,7 +70,7 @@ nnoremap i <Nop>
 set timeoutlen=500 " 映射等待时间减少到 500 毫秒
 set ttimeoutlen=10 " 键码等待时间减少到 10 毫秒
 
-
+"更改insert模式下切换普通模式的快捷键为Shift+c
 inoremap <S-c> <Esc>
 set backspace=indent,eol,start
 
