@@ -71,6 +71,6 @@ set timeoutlen=500 " 映射等待时间减少到 500 毫秒
 set ttimeoutlen=10 " 键码等待时间减少到 10 毫秒
 
 "更改insert模式下切换普通模式的快捷键为Shift+c
-inoremap <S-c> <Esc>
+inoremap <S-x> <Esc>
 set backspace=indent,eol,start
 
