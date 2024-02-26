@@ -54,10 +54,6 @@
             "before": ["l", "l"],  // 按下 'l' 两次
             "after": ["d", "d"]    // 映射到 'dd' 命令
         },
-        {
-            "before": ["d", "d"],  // 按下 'd' 两次
-            "after": []            // 禁用 'dd'
-        }  
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
