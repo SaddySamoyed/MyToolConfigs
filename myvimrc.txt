@@ -9,6 +9,8 @@ set autoindent      " 新行的缩进值与上一行相同
 set smartindent     " 智能缩进，自动调整新行的缩进量
 
 set rnu
+
+"下面这段为支持C++开发如标准库代码补全的功能
 call plug#begin()
 Plug 'neoclide/coc.nvim'
 Plug 'jiangmiao/auto-pairs'
@@ -18,6 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 call plug#end()
 
+"下面这段为Tab代码补全
 "use <tab> for trigger completion and navigate to the next complete item
 function! CheckBackSpace() abort
     let col = col('.') - 1
@@ -26,11 +29,11 @@ endfunction
 
 inoremap <silent><expr> <Tab> pumvisible() ? coc#pum#confirm() : "\<Tab>"
 
-"nerdtree: 工作区
-inoremap <c-b> <Esc>:NERDTreeToggle<cr>
-nnoremap <c-b> <Esc>:NERDTreeToggle<cr>
+"nerdtree快捷键
+inoremap <C-b> <Esc>:NERDTreeToggle<cr>
+nnoremap <C-b> <Esc>:NERDTreeToggle<cr>
 
-
+"下面这段为更改ll代替dd为删除一行
 " 定义一个函数用于处理连续按下 l  的情况
 function! DeleteLineIfPressedTwice()
     if exists('g:press_count') && g:press_count == 1
@@ -45,7 +48,6 @@ function! DeleteLineIfPressedTwice()
         call timer_start(500, {tid -> execute('let g:press_count = 0', '')})
     endif
 endfunction
-
 " 映射 l 键，以便调用上述函数
 nnoremap <silent> l :call DeleteLineIfPressedTwice()<CR>
 
@@ -70,8 +72,10 @@ nnoremap i <Nop>
 set timeoutlen=500 " 映射等待时间减少到 500 毫秒
 set ttimeoutlen=10 " 键码等待时间减少到 10 毫秒
 
-"更改insert模式下切换普通模式的快捷键为Shift + x + c
-"inoremap <S-x> <Esc>
+"设置backspace 能够删除insert 模式下的输入
+set backspace=indent,eol,start
+
+"下面这段为更改<S-x>+<S-c>为insert模式进入normal模式
 function! s:check_for_c()
     " 等待用户输入下一个字符
     let l:char = getchar()
@@ -84,10 +88,9 @@ function! s:check_for_c()
         call feedkeys('X' . nr2char(l:char), 'n')
     endif
 endfunction
-
 " 在插入模式下，当按下 'X' 时，调用上面的函数
 inoremap <expr> X '<Esc>:call <SID>check_for_c()<CR>'
 
-
-set backspace=indent,eol,start
-
+" nerdtree 中光标的上下移动键位
+autocmd FileType nerdtree map <buffer> w <Up>
+autocmd FileType nerdtree map <buffer> s <Down>
