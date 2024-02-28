@@ -29,3 +29,6 @@ g++ -v -E -x c++ -
 // 打开 spotlight
 Command (⌘) + Spacebar
 
+
+// 打印 jupyter notebook
+jupyter nbconvert hw.ipynb --to pdf
