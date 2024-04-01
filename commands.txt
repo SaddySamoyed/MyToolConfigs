@@ -32,3 +32,9 @@ Command (⌘) + Spacebar
 
 // 打印 jupyter notebook
 jupyter nbconvert hw.ipynb --to pdf
+
+// 用 Typora (或者其他应用) 打开某个格式的文件
+ open -a Typora 1.md
+
+// memory leak checking
+MallocStackLogging=1 leaks -quiet -atExit -- ./main.exe
