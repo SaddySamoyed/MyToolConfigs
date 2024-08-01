@@ -38,3 +38,24 @@ jupyter nbconvert hw.ipynb --to pdf
 
 // memory leak checking
 MallocStackLogging=1 leaks -quiet -atExit -- ./main.exe
+
+//macbook
+command + shift + 3 :全屏截图
+command + shift + 4 :手动截图
+
+//python
+打开notebook指令：
+python3 -m IPython notebook
+切清华镜像：
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --set show_channel_urls yes
+去除频道
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/tensorflow/linux/cpu/
+添加新频道：
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/tensorflow/linux/cpu/
+查看频道：
+conda config --show channels
+换回默认源：
+conda config --remove-key channels
+
