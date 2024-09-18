@@ -59,3 +59,7 @@ conda config --show channels
 换回默认源：
 conda config --remove-key channels
 
+查看所有包:
+python -m pip list
+
+python -m pip install gurobipy
