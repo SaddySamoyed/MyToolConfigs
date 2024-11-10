@@ -1,0 +1,36 @@
+// Worksheet
+Translate it into Latex. Do not include the start document and end document information. For a worksheet, please refer to it as a \chapter{...} ; 
+
+For each problem, make it into a subsection*{Pm.n} with the worksheet num m and problem number n; and for some couple of problems, please summarize them and make it into a section. A chapter can have several sections.
+
+for each definition/theorem/remark, please use \begin{definition} ... \end{definition}; \begin{theorem} ... \end{theorem}; \begin{remark} ... \end{remark}
+
+
+
+
+
+
+
+// Homework
+
+Translate it into Latex. Do not include the start document and end document information. For a homework set, please refer to it as a \chapter{HW n} ; 
+
+For each problem, make it into a section*{Problem $n://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
+
+
+
+
+
+
+// Problem set
+
+Translate it into Latex. Do not include the start document and end document information. For a homework set, please refer to it as a \chapter{ProblemSet n} ; 
+
+For each problem, make it into a section*{Problem $n://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
+
+
+
+
+
+
+
