@@ -1534,5 +1534,10 @@
 }
 
 
+\NewDocumentCommand{\xrar}{m}{%
+  \xrightarrow{#1}%
+}
+
+
 
 
