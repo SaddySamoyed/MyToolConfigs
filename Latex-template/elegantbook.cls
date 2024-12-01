@@ -1584,7 +1584,6 @@
 \newcommand{\ptwise}{\xrightarrow{ptwise.}}
 \newcommand{\ball}[2]{\mathcal{B}_{#1}\left(#2\right)}
 \DeclareMathOperator{\osc}{osc}
-\DeclareMathOperator{\diam}{diam}
 
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\SET}{SET}
