@@ -1,7 +1,7 @@
 // Worksheet
-Translate it into Latex. Do not include the start document and end document information. For a worksheet, please refer to it as a \chapter{...} ; 
+Translate it into Latex. Do not include the start document and end document information. For a worksheet $n, please refer to it as a \chapter{...(content)} ; 
 
-For each problem, make it into a subsection*{Pm.n} with the worksheet num m and problem number n; and for some couple of problems, please summarize them and make it into a section. A chapter can have several sections.
+For each problem $x=A,B,C,... in worksheet $n, make it into a subsection{$n$x://...} with the worksheet num m and problem number n; and for some couple of problems, please summarize them and make it into a section. A chapter can have several sections.
 
 for each definition/theorem/remark, please use \begin{definition} ... \end{definition}; \begin{theorem} ... \end{theorem}; \begin{remark} ... \end{remark}
 
@@ -13,9 +13,9 @@ for each definition/theorem/remark, please use \begin{definition} ... \end{defin
 
 // Homework
 
-Translate it into Latex. Do not include the start document and end document information. For a homework set, please refer to it as a \chapter{HW n} ; 
+Translate it into Latex. Do not include the start document and end document information. For a homework set, please refer to it as a \chapter{...(content)} ; 
 
-For each problem, make it into a section*{Problem $n://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
+For each problem $x=A,B,C,... in homework set $n, make it into a section{$n$x://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
 
 
 
@@ -24,9 +24,9 @@ For each problem, make it into a section*{Problem $n://...} with the problem num
 
 // Problem set
 
-Translate it into Latex. Do not include the start document and end document information. For a homework set, please refer to it as a \chapter{ProblemSet n} ; 
+Translate it into Latex. Do not include the start document and end document information. For a problem set, please refer to it as a \chapter{...(content)} ; 
 
-For each problem, make it into a section*{Problem $n://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
+For each problem $x=A,B,C,... in problem set $n, make it into a section{$n$x://...} with the problem number replacing $n, and a summarization of topic of this problem written in the brace replacing "//..."
 
 
 
