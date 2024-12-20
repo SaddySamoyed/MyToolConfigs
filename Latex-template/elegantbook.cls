@@ -1482,40 +1482,8 @@
 \newcommand{\BR}{\mathbb{R}}
 
 
-\DeclareMathOperator{\supp}{supp}
-
-\DeclareMathOperator{\Ob}{Ob}
-\DeclareMathOperator{\SET}{SET}
-\DeclareMathOperator{\Nat}{Nat}
-\DeclareMathOperator{\Mor}{Mor}
-\DeclareMathOperator{\colim}{colim}
-\DeclareMathOperator{\op}{op}
-\DeclareMathOperator{\Map}{Map}
-
 \DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\ord}{ord}
-
-\DeclareMathOperator{\Mat}{Mat}
-\DeclareMathOperator{\Span}{span}
-\DeclareMathOperator{\Alt}{Alt}
-\DeclareMathOperator{\Mult}{Mult}
-\DeclareMathOperator{\rref}{rref}
-\DeclareMathOperator{\rank}{rank}
-\DeclareMathOperator{\nullity}{nullity}
-\DeclareMathOperator{\codim}{codim}
-\DeclareMathOperator{\Ann}{Ann}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\SU}{SU}
-\DeclareMathOperator{\trace}{tr}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\proj}{proj}
-
-\DeclareMathOperator*{\curl}{curl}
-\DeclareMathOperator*{\divergence}{div}
-\renewcommand*{\div}{\divergence}
-
 
 
 \newcommand{\insertpic}[4][width=\textwidth]{
@@ -1614,51 +1582,3 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\proj}{proj}
 \newcommand{\cond}{P\condarg}
-\DeclarePairedDelimiterX{\condarg}[1]{(}{)}{%
-  \ifnum\currentgrouptype=16 \else\begingroup\fi
-  \activatebar#1
-  \ifnum\currentgrouptype=16 \else\endgroup\fi
-}
-
-
-\newcommand{\expect}{\mathop{\operatorname{E}}\expectarg}
-\DeclarePairedDelimiterX{\expectarg}[1]{[}{]}{%
-  \ifnum\currentgrouptype=16 \else\begingroup\fi
-  \activatebar#1
-  \ifnum\currentgrouptype=16 \else\endgroup\fi
-}
-
-\newcommand{\innermid}{\nonscript\;\delimsize\vert\nonscript\;}
-\newcommand{\activatebar}{%
-  \begingroup\lccode`\~=`\|
-  \lowercase{\endgroup\let~}\innermid
-  \mathcode`|=\string"8000
-}
-
-\DeclarePairedDelimiterX{\set}[1]\{\}{\setargs{#1}}
-\NewDocumentCommand{\setargs}{>{\SplitArgument{1}{;}}m}
-{\setargsaux#1}
-\NewDocumentCommand{\setargsaux}{mm}
-{\IfNoValueTF{#2}{#1}{\nonscript\,#1\nonscript\;\delimsize\vert\nonscript\:\allowbreak #2\nonscript\,}}
-%%% Syntaxe : \set{x ; P(x)})
-\let\oldset\set
-\def\set{\futurelet\testchar\MaybeOptArgSet}
-\def\MaybeOptArgSet{\ifx[\testchar \let\next\OptArgSet
-\else \let\next\NoOptArgSet \fi \next}
-\def\OptArgSet[#1]#2{\oldset[#1]{#2}}
-\def\NoOptArgSet#1{\OptArgSet[\big]{#1}}
-
-\def\Set{\oldset*}
-
-\DeclareMathOperator{\cov}{cov}
-\DeclareMathOperator{\var}{var}
-\DeclareMathOperator{\corr}{cor}
-
-
-\pgfmathdeclarefunction{gauss}{2}{%
-  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
-}
-
-
-
-
