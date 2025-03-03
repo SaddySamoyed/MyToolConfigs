@@ -439,7 +439,7 @@
   \setlength\parindent{2em}
   \newcommand\figref[1]{\textbf{Figure}~\ref{#1}}
   \newcommand\tabref[1]{\textbf{Table}~\ref{#1}}
-  \renewcommand{\chaptername}{HW}
+  \renewcommand{\chaptername}{hw}
   \renewcommand{\partname}{\color{structurecolor} Part}
   \newcommand{\authorname}{\textbf{Author: }}
   \newcommand{\institutename}{\textbf{Institute: }}
@@ -1187,3 +1187,36 @@
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\Map}{Map}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+
+\newcommand{\rar}{\rightarrow}
+\newcommand{\lar}{\leftarrow}
+\newcommand{\eq}{\Leftrightarrow}
+\newcommand{\union}{\bigcup}
+\newcommand{\intsec}{\bigcap}
+\newcommand{\bigunion}{\displaystyle\bigcup}
+\newcommand{\bigintsec}{\displaystyle\bigcap}
+\newcommand{\BR}{\mathbb{R}}
+
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\ord}{ord}
+
+
+\newcommand{\insertpic}[4][width=\textwidth]{
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#4}
+    \end{figure}
+}
+
+\newcommand{\pic}[2][width=\textwidth]{
+    \begin{center}
+        \includegraphics[#1]{#2} % #1: 图片尺寸，#2: 图片路径
+    \end{center}
+}

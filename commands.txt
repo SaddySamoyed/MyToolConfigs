@@ -63,3 +63,12 @@ conda config --remove-key channels
 python -m pip list
 
 python -m pip install gurobipy
+
+
+
+
+
+// conda 打开环境
+conda activate eecs545
+// conda 加载包
+conda install ...
