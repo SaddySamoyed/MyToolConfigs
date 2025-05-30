@@ -1,9 +1,16 @@
 set fish_greeting
 echo "🐟 Welcome back, QL! Hail to the Elden Lord! "
-
 function fish_prompt
     echo -n (prompt_pwd) ' ▶ '
 end
+
+if test (uname) = "Darwin"
+    echo "Running on macOS 🍎"
+    cd desktop
+end
+
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /Users/fanqiulin/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
