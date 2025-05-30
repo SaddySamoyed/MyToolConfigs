@@ -65,8 +65,8 @@ My .vimrc settings and VSCode vim mode settings.
    Win Powershell:
 
    ```shell
-   $plugPath = "$HOME/vimfiles/autoload/plug.vim"
-   iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $plugPath -Force
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+       ni $HOME/vimfiles/autoload/plug.vim -Force
    ```
 
 2. 下载 node.js 18.x
