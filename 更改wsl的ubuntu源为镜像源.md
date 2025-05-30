@@ -1,5 +1,42 @@
 分享一个回到国内, 更新 wsl2 的时候出现的一点问题，，发现 
 
+
+
+## 同步 windows 里开的 vpn
+
+注意到一件事情是:  windows 开了 vpn 之后 wsl 不会自动跟随.
+
+所以我们得手动跟随
+
+
+
+我这里用的是 clash verge 作为机场, 代理随便找的
+
+找到 clash 的代理端口：我这里是 7897
+
+因而我们打开 shell 的 rc 加入: 
+
+```shell
+export http_proxy=http://127.0.0.1:7897
+export https_proxy=http://127.0.0.1:7897
+```
+
+就可以了
+
+然后我们测试一下:
+
+```shell
+curl https://ipinfo.io
+```
+
+如果是代理 ip 而不是我们自己的 ip, 则成功.
+
+
+
+
+
+## 更改 ubuntu source 为国内镜像
+
 ```shell
 sudo apt update
 ```
