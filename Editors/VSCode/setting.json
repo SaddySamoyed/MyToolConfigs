@@ -1,0 +1,255 @@
+{
+    
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13",
+    "terminal.integrated.inheritEnv": false,
+    "editor.accessibilitySupport": "on",
+    "code-runner.saveAllFilesBeforeRun": true,
+    "cmake.configureOnOpen": true,
+    "code-runner.executorMap": {
+
+
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "zig": "zig run",
+        //"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "workbench.editorAssociations": {
+        "*.pdf": "pdf.preview"
+    },
+    "window.zoomLevel": 1,
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.showOptionsMovedNotification": false,
+    "extensions.ignoreRecommendations": true,
+    "lldb.showDisassembly": "never",
+    "files.autoSave": "afterDelay",
+    "editor.stickyTabStops": true,
+    "editor.autoIndent": "advanced",
+    "editor.indentSize": "tabSize",
+
+    //vim settings
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<Shift>", "x"],
+            "after": ["<Esc>"]
+        },
+        {
+           "before": ["<S-x>", "<S-c>"], // <shift-x>+<shift-c> 进入 normal mode
+            "after": ["<Esc>"]         
+        }
+    ],
+    
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {  
+            "before": ["<Space>"],  // <Space> 进入 insert mode
+            "after": ["i"]
+        },
+        {
+            "before": ["<S-v>"],  // <Shift+v> 进入 visual mode
+            "after": ["v"]
+        },
+        {
+            "before": ["v"],
+            "after": []  //禁用v
+        },
+        {  
+            "before": ["i"], 
+            "after": []  // 禁用i
+        }, 
+        {
+           "before": ["a"],
+            "after": ["b"] 
+        },
+        {
+           "before": ["d"],
+            "after": ["w"] 
+        },
+        {
+           "before": ["w"],
+            "after": ["k"] 
+        }, 
+        {
+           "before": ["s"],
+            "after": ["j"] 
+        }, 
+        {
+            "before": ["l", "l"],  // 按下 'l' 两次
+            "after": ["d", "d"]    // 映射到 'dd' 命令
+        },
+        {
+        "key": "ctrl+c",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        },
+        {
+        "key": "ctrl+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        },
+        {
+        "key": "ctrl+c",
+        "command": "extension.vim_ctrl+c",
+        "when": "!editorTextFocus"
+        },
+        {
+        "key": "ctrl+v",
+        "command": "extension.vim_ctrl+v",
+        "when": "!editorTextFocus"
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<S-x>", "<S-c>"],  //<shift-x>+<shift-c> 进入normal mode
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<backspace>"], // <backspace> 表示整段删除, 原本c的作用
+            "after": ["c"]
+        },
+        {
+            "before": ["c"], // 禁用 c
+            "after": []
+        },
+        {
+            "before": ["<Space>"], // <Space 进入 insert mode
+            "after": ["I"]
+        }
+    ],  
+
+
+    "vim.handleKeys": {
+        
+
+            "<C-a>": false,
+            "<C-f>": false
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/**",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+    ],
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    ],
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.fontSize": 11,
+    "editor.accessibilityPageSize": 12,
+    "diffEditor.maxComputationTime": 0,
+    "typescript.tsserver.watchOptions": {
+        
+
+    },
+    
+    "latex-workshop.latex.tools": [
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+        ]
+    }
+    ],
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+        "path": "/opt/homebrew/bin/fish" // 如果你是 Apple Silicon (M1/M2/M3)
+        // "path": "/usr/local/bin/fish" // 如果你是 Intel Mac
+        }
+    },
+    "background.enabled": true,
+    "background.panel": {
+        "useFront": true,
+        "images": ["file:///Users/fanqiulin/Documents/Photos/scene.jpeg"],
+        "opacity": 0.08,
+        "width": "100%",
+        "height": "100%",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat"
+    },
+    "background.sidebar": {
+        "useFront": true,
+        "images": ["file:///Users/fanqiulin/Documents/Photos/samurai.jpeg"],
+        "opacity": 0.08,
+        "width": "100%",
+        "height": "100%",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat"
+    }
+
+
+}

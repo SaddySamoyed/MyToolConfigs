@@ -75,4 +75,13 @@ set -gx PATH /opt/homebrew/bin /usr/local/bin $PATH
 source ~/.config/fish/config.fish
 ```
 
-我附上了我自己的 config 文件. 我
+我附上了我自己的 config 文件. 
+
+
+
+
+
+
+
+
+
