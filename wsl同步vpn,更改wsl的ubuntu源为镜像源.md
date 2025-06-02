@@ -125,6 +125,21 @@ ping6 -c 3 archive.ubuntu.com
 
 
 
+### 确认 ubuntu 版本
+
+| 版本代号 | Ubuntu版本 |
+| -------- | ---------- |
+| `jammy`  | 22.04      |
+| `noble`  | 24.04      |
+
+我们这样确认一下: 
+
+```shell
+lsb_release -a
+```
+
+我这里是 jammy. 因而全部换成 jammy 的镜像源.
+
 直接 `sudo nano` 把这个文件内容改成:
 
 ```list
@@ -135,3 +150,34 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted 
 ```
 
 然后就可以正常使用 `sudo apt`.
+
+
+
+
+
+### 额外: Launchpad 镜像
+
+我这里为了安装 g++13 首先需要 launchpad. 
+
+这个也有 thu 镜像:
+
+```shell
+sudo sed -i 's|http://ppa.launchpad.net|https://launchpad.proxy.ustclug.org|g' /etc/apt/sources.list.d/ubuntu-toolchain.list
+
+# 更新并安装 g++
+sudo apt update
+sudo apt install g++-13
+```
+
+
+
+强制使用 IPv4 (因为有些网络环境对 ipv6 支持不好)
+
+```shell
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+```
+
+
+
+
+
