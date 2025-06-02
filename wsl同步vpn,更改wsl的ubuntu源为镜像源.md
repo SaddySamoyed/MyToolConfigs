@@ -128,69 +128,10 @@ ping6 -c 3 archive.ubuntu.com
 直接 `sudo nano` 把这个文件内容改成:
 
 ```list
-# 使用中科大镜像源（Ubuntu 22.04 jammy）
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security multiverse
-# 使用中科大镜像源（Ubuntu 22.04 jammy）
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security universe
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security universe
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security multiverse
-
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 ```
 
 然后就可以正常使用 `sudo apt`.
