@@ -1,78 +1,16 @@
 {
     
-    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "workbench.colorTheme": "Atom One Dark",
     "[python]": {
         "editor.formatOnType": true
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13",
     "terminal.integrated.inheritEnv": false,
     "editor.accessibilitySupport": "on",
-    "code-runner.saveAllFilesBeforeRun": true,
     "cmake.configureOnOpen": true,
-    "code-runner.executorMap": {
-
-
-        "javascript": "node",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "zig": "zig run",
-        //"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "php": "php",
-        "python": "python -u",
-        "perl": "perl",
-        "perl6": "perl6",
-        "ruby": "ruby",
-        "go": "go run",
-        "lua": "lua",
-        "groovy": "groovy",
-        "powershell": "powershell -ExecutionPolicy ByPass -File",
-        "bat": "cmd /c",
-        "shellscript": "bash",
-        "fsharp": "fsi",
-        "csharp": "scriptcs",
-        "vbscript": "cscript //Nologo",
-        "typescript": "ts-node",
-        "coffeescript": "coffee",
-        "scala": "scala",
-        "swift": "swift",
-        "julia": "julia",
-        "crystal": "crystal",
-        "ocaml": "ocaml",
-        "r": "Rscript",
-        "applescript": "osascript",
-        "clojure": "lein exec",
-        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-        "racket": "racket",
-        "scheme": "csi -script",
-        "ahk": "autohotkey",
-        "autoit": "autoit3",
-        "dart": "dart",
-        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-        "haskell": "runghc",
-        "nim": "nim compile --verbosity:0 --hints:off --run",
-        "lisp": "sbcl --script",
-        "kit": "kitc --run",
-        "v": "v run",
-        "sass": "sass --style expanded",
-        "scss": "scss --style expanded",
-        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "sml": "cd $dir && sml $fileName"
-    },
-    "code-runner.runInTerminal": true,
-    "code-runner.clearPreviousOutput": true,
     "workbench.editorAssociations": {
         "*.pdf": "pdf.preview"
     },
-    "window.zoomLevel": 1,
     "git.openRepositoryInParentFolders": "never",
     "cmake.showOptionsMovedNotification": false,
     "extensions.ignoreRecommendations": true,
@@ -175,35 +113,21 @@
             "after": ["I"]
         }
     ],  
-
-
     "vim.handleKeys": {
         
 
             "<C-a>": false,
             "<C-f>": false
     },
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
-    },
     "C_Cpp.default.cppStandard": "c++23",
     "C_Cpp.default.cStandard": "c23",
-    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
     "C_Cpp.autocompleteAddParentheses": true,
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}/include/**",
-        "${workspaceFolder}/**",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
-        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
-        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-    ],
     "vim.commandLineModeKeyBindingsNonRecursive": [
     ],
     "github.copilot.editor.enableAutoCompletions": true,
-    "editor.fontSize": 11,
+    "editor.fontSize": 14,
     "editor.accessibilityPageSize": 12,
+    "window.zoomLevel": 2,
     "diffEditor.maxComputationTime": 0,
     "typescript.tsserver.watchOptions": {
         
@@ -225,14 +149,15 @@
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.profiles.osx": {
         "fish": {
-        "path": "/opt/homebrew/bin/fish" // 如果你是 Apple Silicon (M1/M2/M3)
+        "path": "/usr/bin/fish" // 如果你是 Apple Silicon (M1/M2/M3)
         // "path": "/usr/local/bin/fish" // 如果你是 Intel Mac
         }
     },
+    /*
     "background.enabled": true,
     "background.panel": {
         "useFront": true,
-        "images": ["file:///Users/fanqiulin/Documents/Photos/scene.jpeg"],
+        "images": ["file:///C:/Users/19680/Pictures/02.jpg"],
         "opacity": 0.08,
         "width": "100%",
         "height": "100%",
@@ -242,14 +167,35 @@
     },
     "background.sidebar": {
         "useFront": true,
-        "images": ["file:///Users/fanqiulin/Documents/Photos/samurai.jpeg"],
+        "images": ["file:///C:/Users/19680/Pictures/02_6.jpg"],
         "opacity": 0.08,
         "width": "100%",
         "height": "100%",
         "backgroundSize": "cover",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat"
-    }
-
-
+    },
+    */
+    //"workbench.colorCustomizations": {"editor.background": "#282727"},
+    "terminal.integrated.fontSize": 14,
+    "git.autofetch": true,
+    "background.editorBackgrounds": [
+        "/C:/Users/19680/Pictures/02_3.jpg"
+    ],
+    "background.panelBackgrounds": [
+        "/C:/Users/19680/Pictures/02.jpg"
+    ],
+    "background.sidebarBackgrounds": [
+        "/C:/Users/19680/Pictures/02_6.jpg"
+    ],
+    "background.backgroundOpacity": [
+        0.06,
+        0.05,
+        0.06,
+        0.06
+    ],
+    "background.autoInstall": true,
+    "background.renderContentAboveBackground": true,
+    "background.smoothImageRendering": true,
+    "vscode_custom_css.imports": ["file:///C:/Users/19680/Pictures/VSCodeLogo/code_logo.css"]
 }
