@@ -3,7 +3,7 @@
 ## install
 
 ```shell
-brew install fish
+brew install fish # sudo apt install fish
 which fish
 ```
 
@@ -29,6 +29,7 @@ sudo vim /etc/shells
 
 ```shell
 /opt/homebrew/bin/fish   # for Apple Silicon
+/usr/bin/fish  # linux
 ```
 
 就把 fish 加入了系统认可的 shells 中
@@ -65,6 +66,12 @@ fish_config
 
 ```shell
 set -gx PATH /opt/homebrew/bin /usr/local/bin $PATH
+```
+
+linux:
+
+```shell
+set -gx PATH /usr/bin /usr/local/bin $PATH
 ```
 
 然后才能使用 `code`. 但是注意到这是临时的, 结束掉这个 terminal 就又没了. 所以我们要在 `~/.config/fish/config.fish` 里面也加上这一行 `set -gx PATH /opt/homebrew/bin /usr/local/bin $PATH`, 这样就永久识别了. 

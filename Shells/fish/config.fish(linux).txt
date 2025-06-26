@@ -7,7 +7,6 @@ end
 
 if test -n "$WSL_DISTRO_NAME"
     echo "Running in WSL: $WSL_DISTRO_NAME"
-    cd ~/documents
 end
 if status is-interactive
     # Commands to run in interactive sessions can go here
