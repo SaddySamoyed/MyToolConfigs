@@ -6,13 +6,13 @@
 
 
 
-step 1: language pack downloading
+### step 1: language pack downloading
 
 第一步绝对是下载一下自己需要的 language pack. 首先打字爽了再说.
 
 
 
-step 2: chrome
+### step 2: chrome
 
 我觉得最主要的还是先下载个浏览器再说. 下载其他东西通常都需要经过浏览器. 并且 edge 看着真的很花里胡哨且累眼. 所以我会选择下一个 chrome, 然后 sync 一下我的账号.
 
@@ -20,25 +20,25 @@ step 2: chrome
 
 
 
-step 3: steam (for wallpaper engine)
+### step 3: steam (for wallpaper engine)
 
 很 personal. 我的第三件事情是下 steam 然后下 wallpaper engine. 不用自己常用的壁纸真的很难使用这个电脑.
 
 
 
-step 4: logi Ghub
+### step 4: logi GHub
 
 调一下鼠标的灵敏度.
 
 
 
-step 4: github desktop
+### step 4: github desktop
 
 个人习惯把很多 settings 的 config 文件都在 github desktop, 所以接下来会下一个 github desktop
 
 
 
-step 5: wsl 下载
+### step 5: wsl 下载
 
 最重要的就是先把 wsl 下了
 
@@ -58,7 +58,7 @@ sudo update-alternatives --config g++
 
 
 
-step 6: VSCode, typora, sublime
+### step 6: VSCode, typora, sublime
 
 赶紧下个 VSCode 然后连接一下 wsl. 以及同步一下同系统之前保存好的 setting.json 文件
 
@@ -66,13 +66,17 @@ step 6: VSCode, typora, sublime
 
 
 
-step 7: 下一下 google drive 和 dropbox, 同步一下文件
+### step 7: 下一下 google drive 和 dropbox, 同步一下文件
+
+cloud drive 可以同步一下老电脑的 desktop 和 documents
 
 
 
-step 8: 切个好的 shell. 
+### step 8: 切个顺手的 shell
 
-```
+我切下 fish
+
+```shell
 sudo apt install fish
 chsh -s /usr/bin/fish
 ```
@@ -102,7 +106,7 @@ sudo code ~/.config/fish/config.fish
 
 
 
-step 9: 配置一下 github 需要用到的 ssh
+### step 9: 配置一下 github 需要用到的 ssh
 
 ```shell
 sudo apt install openssh-client
@@ -113,3 +117,80 @@ cat ~/.ssh/id_ed25519.pub
 
 结果复制到 github 的 ssh
 
+
+
+### stp10: 配置一下常用 scripting language 的环境
+
+scripting language 还是非常必要的
+
+我习惯用 py
+
+我这里在 windows 和 wsl 都下一个 miniconda 的包管理器
+
+Windows:
+
+```shell
+wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" -outfile ".\Downloads\Miniconda3-latest-Windows-x86_64.exe"
+```
+
+```shell
+~/Miniconda3-latest-Linux-x86_64.sh
+```
+
+
+
+Linux:
+
+```shell
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
+
+```shell
+bash ~/Miniconda3-latest-Linux-x86_64.sh
+# Miniconda3 will now be installed into this location: /home/rynne/miniconda3
+```
+
+在 config 文件里:
+
+```shell
+set -gx PATH /home/rynne/miniconda3/bin $PATH
+```
+
+然后 source 一下. 
+
+然后可以创建环境
+
+```shell
+conda create -n myenv python=3.12
+```
+
+查看:
+
+```shell
+conda env list
+```
+
+
+
+而 windows 的直接用 anaconda powershell 就行.
+
+
+
+还可以下载额外 GUI:
+
+```shell
+conda install jupyterlab
+conda install anaconda-navigator
+```
+
+
+
+
+
+### step 11: 其他常用软件
+
+我的话会下一个 mathpix 快速公式转 latex/md 的工具
+
+以及一个 powertoy, 重新映射一下键, 把 f6 映射到 printscreen
+
+(powertoy 真挺有用的. 因为比如 rog 幻 16 的原生键盘布局是没有 printscreen 的.)
