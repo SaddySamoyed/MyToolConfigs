@@ -66,6 +66,38 @@ sudo update-alternatives --config g++
 
 
 
+顺便, 更改一下注册表里的可新建类型, 右键新建更快一点.
+
+比如 md: 新建一个 `something.reg` 文件, 放入这个然后双击运行一下就好了
+
+```reg
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\.md]  ; 清除原有 .md 注册信息
+
+[HKEY_CLASSES_ROOT\.md]
+@="Markdown.File"
+"Content Type"="text/markdown"
+
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+"NullFile"=""
+
+[HKEY_CLASSES_ROOT\Markdown.File]
+@="Markdown File"
+
+[HKEY_CLASSES_ROOT\Markdown.File\ShellNew]
+"NullFile"=""
+
+```
+
+
+
+
+
+
+
+
+
 ### step 7: 下一下 google drive 和 dropbox, 同步一下文件
 
 cloud drive 可以同步一下老电脑的 desktop 和 documents
@@ -185,7 +217,7 @@ conda install anaconda-navigator
 
 
 
-
+ 
 
 ### step 11: 其他常用软件
 
@@ -194,3 +226,8 @@ conda install anaconda-navigator
 以及一个 powertoy, 重新映射一下键, 把 f6 映射到 printscreen
 
 (powertoy 真挺有用的. 因为比如 rog 幻 16 的原生键盘布局是没有 printscreen 的.)
+
+然后把灯光什么的调一下
+
+以及下个 custom cursor 
+
