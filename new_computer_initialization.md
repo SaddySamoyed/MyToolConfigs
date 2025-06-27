@@ -231,3 +231,18 @@ conda install anaconda-navigator
 
 以及下个 custom cursor 
 
+
+
+
+### step 12: memory management
+
+内存管理. 还是挺重要的
+
+主要有些厂商开机占有率太高了.
+
+我会:
+
+1. 给 wsl 分配指定的内存上限. 不能太高了
+2. 下载一个 RamMap 管理内存
+3. 下载一个 rainmeter 放在桌面监视一下占有率
+4. 启动一下独显直连. 核显还是不用好
