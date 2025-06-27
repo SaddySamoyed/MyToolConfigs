@@ -246,3 +246,5 @@ conda install anaconda-navigator
 2. 下载一个 RamMap 管理内存
 3. 下载一个 rainmeter 放在桌面监视一下占有率
 4. 启动一下独显直连. 核显还是不用好
+
+这样我的开机时内存占用率就从 60% 降低到了 25%. 
