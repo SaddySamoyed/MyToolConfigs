@@ -238,7 +238,7 @@ conda install anaconda-navigator
 
 内存管理. 还是挺重要的
 
-主要有些厂商开机占有率太高了.
+主要有些厂商开机占有率太高了. 大概率是一些服务 start up 的原因, 首先少开点 app 上的 startup (比如 dropbox) 其次对系统的 startup processes 可以用 RamMap 清一下
 
 我会:
 
