@@ -246,17 +246,17 @@ conda install anaconda-navigator
 
 2. 下载一个 RamMap 管理内存
 
-3.  下载一个 autohotkey 然后把这一段 `launch_gamebar.ahk` 的 快捷方式放在 shell:startup 里面 (winR 打开输入 shell:shartup)
+3. 下载一个 autohotkey 然后把这一段 `launch_gamebar.ahk` 的 快捷方式放在 shell:startup 里面 (winR 打开输入 shell:shartup)
 
    ```ahk
    #Persistent
-   SetTimer, LaunchGameBar, 8000  ; 等待8秒后执行（确保系统加载完）
+   SetTimer, LaunchGameBar, 5000  ; 等待5秒后执行（确保系统加载完）
    Return
    
    LaunchGameBar:
    SetTimer, LaunchGameBar, Off
    Send, #{g} ; 发送 Win+G
-   Return
+   ExitApp
    
    ```
 
