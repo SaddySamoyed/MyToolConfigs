@@ -24,7 +24,7 @@
 
 很 personal. 我的第三件事情是下 steam 然后下 wallpaper engine. 不用自己常用的壁纸真的很难使用这个电脑.
 
-btw 启动覆盖 Lock screen + 允许 sleep 时运行还可以解锁覆盖屏保小连招. 不过刚开机的时候不会启动，还得同时自己设一个文件夹 slide.
+btw 启动覆盖 Lock screen + 允许 sleep 时运行还可以解锁覆盖屏保小连招. 不过刚开机的时候有时候偶尔不会启动 (可能是 synchronization 问题)，最好自己也设一个文件夹 slide.
 
 ### step 4: logi GHub
 
