@@ -243,8 +243,25 @@ conda install anaconda-navigator
 我会:
 
 1. 给 wsl 分配指定的内存上限. 不能太高了
+
 2. 下载一个 RamMap 管理内存
-3. 下载一个 rainmeter 放在桌面监视一下占有率
+
+3.  下载一个 autohotkey 然后把这一段 `launch_gamebar.ahk` 的 快捷方式放在 shell:startup 里面 (winR 打开输入 shell:shartup)
+
+   ```ahk
+   #Persistent
+   SetTimer, LaunchGameBar, 8000  ; 等待8秒后执行（确保系统加载完）
+   Return
+   
+   LaunchGameBar:
+   SetTimer, LaunchGameBar, Off
+   Send, #{g} ; 发送 Win+G
+   Return
+   
+   ```
+
+   目的是用 gamebar 来检测性能.
+
 4. 启动一下独显直连. 核显还是不用好
 
 这样我的开机时内存占用率就从 60% 降低到了 25%. 
