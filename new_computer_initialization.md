@@ -4,31 +4,47 @@
 
 (以下文字全是个人意见.)
 
-
+BTW 不止买电脑. 我感觉也可以作为一个配置备忘录以防忘记自己配了些啥
 
 ### step 1: language pack downloading
 
-第一步绝对是下载一下自己需要的 language pack. 首先打字爽了再说.
+第一步绝对是下载一下自己需要的 language pack. 首先打字爽了再说. 中英日都配一个比较好. 切换方便
 
 
 
 ### step 2: chrome
 
-我觉得最主要的还是先下载个浏览器再说. 下载其他东西通常都需要经过浏览器. 并且 edge 看着真的很花里胡哨且累眼. 所以我会选择下一个 chrome, 然后 sync 一下我的账号.
+我觉得最主要的还是先下载个浏览器. 下载其他东西通常都需要经过浏览器访问官网. 但是 edge 看着真的很花里胡哨且累眼, 一秒都不想用. 所以我会选择下一个 chrome, 然后 sync 一下我的账号. (账号的 setting 一同步就开始习惯起来了)
+
+
+
+### step 3: logi GHub
+
+下了 chrome 之后第一件事情是去 logi 官网下一个 GHub 调一下鼠标的灵敏度. 
+
+这真太重要了. 鼠标灵敏度不习惯跟吃使一样难受
 
 
 
 
 
-### step 3: steam (for wallpaper engine)
+### step 4: wallpaper engine, 以及换 cursor
 
 很 personal. 我的第三件事情是下 steam 然后下 wallpaper engine. 不用自己常用的壁纸真的很难使用这个电脑.
 
 btw 启动覆盖 Lock screen + 允许 sleep 时运行还可以解锁覆盖屏保小连招. 不过刚开机的时候有时候偶尔不会启动 (可能是 synchronization 问题)，最好自己也设一个文件夹 slide.
 
-### step 4: logi GHub
 
-调一下鼠标的灵敏度.
+
+以及既然这样了那就顺便把外观都搞定一下. 我会习惯换一个 cursor.
+
+我用的是:
+
+https://www.rw-designer.com/cursor-set/hollow-knight
+
+注意这些可以免费的贴图文件的网站很多都一堆广告. 千万别点广告里面以假乱真的 download 点了就是流氓软件. 
+
+
 
 
 
@@ -219,17 +235,19 @@ conda install anaconda-navigator
 
  
 
-### step 11: 其他常用软件
+### step 11: 其他常用软件: powertoy 等
 
 我的话会下一个 mathpix 快速公式转 latex/md 的工具
 
 以及一个 powertoy, 重新映射一下键, 把 f6 映射到 printscreen
 
-(powertoy 真挺有用的. 因为比如 rog 幻 16 的原生键盘布局是没有 printscreen 的.)
+(powertoy 真挺有用的. 因为比如 rog 幻 16 的原生键盘布局是没有 printscreen 的, 所以i必须得重新映射一个键.)
 
 然后把灯光什么的调一下
 
-以及下个 custom cursor 
+
+
+
 
 
 
