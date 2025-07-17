@@ -247,6 +247,10 @@ conda install anaconda-navigator
 
 
 
+然后充电情况检测: HwiNFO
+
+
+
 
 
 
