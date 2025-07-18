@@ -56,7 +56,9 @@ https://www.rw-designer.com/cursor-set/hollow-knight
 
 ### step 5: wsl 下载
 
-最重要的就是先把 wsl 下了
+最重要的就是先把 wsl 下了.
+
+先在 control panel 中 -> windows features -> turn windows features on or off -> 开启 WSL 和虚拟机平台
 
 ```shell
 wsl --install
