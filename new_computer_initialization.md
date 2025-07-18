@@ -48,9 +48,17 @@ https://www.rw-designer.com/cursor-set/hollow-knight
 
 
 
-### step 4: github desktop
+### step 5: github desktop
 
 个人习惯把很多 settings 的 config 文件都在 github desktop, 所以接下来会下一个 github desktop
+
+
+
+### step 6: 更改一下 file explorer 的文件布局
+
+我的习惯是: medium icon, group by type, show filename extension 和hidden items
+
+然后点击上面三个点 -> options -> view -> 把当前的布局应用到全部文件夹
 
 
 
@@ -140,7 +148,6 @@ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > mi
 sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update
-sudo apt install code
 ```
 
 )
@@ -151,6 +158,8 @@ sudo apt install code
 set -gx PATH /usr/bin /usr/local/bin $PATH
 sudo code ~/.config/fish/config.fish
 ```
+
+把 config.fish 贴进去就行
 
 
 
