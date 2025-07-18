@@ -5,6 +5,7 @@
         "editor.formatOnType": true
     },
     "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13",
     // editor interface
     "editor.accessibilitySupport": "on",
     "editor.fontSize": 14,
@@ -144,8 +145,17 @@
     // cpp standard
     "C_Cpp.default.cppStandard": "c++23",
     "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
     "C_Cpp.autocompleteAddParentheses": true,
-    "window.zoomLevel": 2,
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/**",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+    ],
     "diffEditor.maxComputationTime": 0,
     "latex-workshop.latex.tools": [
     {
@@ -169,29 +179,47 @@
     },
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.inheritEnv": false,
-    // background settings
-    "background.editorBackgrounds": [
-        "file:///C:/Users/rynne/OneDrive/Pictures/02_6.jpg"
-    ],
-    "background.panelBackgrounds": [
-        "file:///C:/Users/rynne/OneDrive/Pictures/02.jpg"
-    ],
-    "background.sidebarBackgrounds": [
-        "file:///C:/Users/rynne/OneDrive/Pictures/02_5.jpg"
-    ],
-    "background.backgroundOpacity": [
-        0.06,
-        0.05,
-        0.06,
-        0.06
-    ],
-    "background.autoInstall": true,
-    "background.renderContentAboveBackground": true,
-    "background.smoothImageRendering": true,
+    
     "vscode_custom_css.imports": [
         "file:///C:/Users/rynne/OneDrive/Pictures/VSCodeLogo/code_logo.css"
     ],
-
+    "background.enabled" : true,
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_6.jpg"],
+        "interval": 0,
+        "random": false
+    },
+    "background.panel": {
+        "useFront": true,
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02.jpg"],
+        "interval": 0,
+        "random": false
+    },
+    "background.sidebar": {
+        "useFront": true,
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_5.jpg"],
+        "interval": 0,
+        "random": false
+    },
     "workbench.startupEditor": "none",
     // copilot settings
     "github.copilot.nextEditSuggestions.enabled": true,
