@@ -7,7 +7,6 @@ end
 
 if test -n "$WSL_DISTRO_NAME"
     echo "Running in WSL: $WSL_DISTRO_NAME"
-    cd ~/documents
 end
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -44,13 +43,17 @@ set -gx PATH "/Applications/Sublime Text.app/Contents/SharedSupport/bin" $PATH
 # ===============================
 # Conda 初始化（fish 版本）
 # ===============================
-if test -f /Users/fanqiulin/miniconda3/bin/conda
-    # Conda for fish: try using hook
-    eval (/Users/fanqiulin/miniconda3/bin/conda shell.fish hook)
-else if test -f /Users/fanqiulin/miniconda3/etc/profile.d/conda.sh
-    # Fallback: manually add bin
-    set -gx PATH "/Users/fanqiulin/miniconda3/bin" $PATH
-end
+set -gx PATH /home/rynne/miniconda3/bin $PATH
+set -Ux CONDA_EXE /home/rynne/miniconda3/bin/conda
+set -Ux _CONDA_ROOT /home/rynne/miniconda3
+set -Ux CONDA_SHLVL 0
+set -Ux CONDA_PREFIX ""
+set -Ux CONDA_DEFAULT_ENV ""
+set -Ux CONDA_PROMPT_MODIFIER ""
+# 添加 conda 初始化脚本到 config.fish
+echo 'source /home/rynne/miniconda3/etc/fish/conf.d/conda.fish' >> ~/.config/fish/config.fish
+eval (/home/rynne/miniconda3/bin/conda shell.fish hook)
+
 
 # ===============================
 # alias
@@ -85,6 +88,15 @@ function fish_prompt
     echo -n " \$ "
 end
 
+set -gx CXX /usr/bin/g++-13
+set -gx CC /usr/bin/gcc-13
+function g++ --wraps g++-13
+    command g++-13 $argv
+end
+
+function gcc --wraps gcc-13
+    command gcc-13 $argv
+end
 
 
-
+source /home/rynne/miniconda3/etc/fish/conf.d/conda.fish

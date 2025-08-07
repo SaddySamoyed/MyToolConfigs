@@ -1,25 +1,46 @@
 {
-    
+    // theme
     "workbench.colorTheme": "Atom One Dark",
     "[python]": {
         "editor.formatOnType": true
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.inheritEnv": false,
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13",
+    // editor interface
     "editor.accessibilitySupport": "on",
-    "cmake.configureOnOpen": true,
+    "editor.fontSize": 14,
+    "editor.accessibilityPageSize": 12,
+    "editor.stickyTabStops": true,
+    "editor.autoIndent": "advanced",
+    "editor.indentSize": "tabSize",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+            "scope": [
+                "comment",
+                "comment.block.documentation",
+                "comment.block",
+                "comment.line.double-slash"
+            ],
+            "settings": {
+                "foreground": "#319131",  // 绿色
+                "fontStyle": ""           // 可设置为 "italic" 或 "bold" 看个人喜好
+            }
+            }
+        ]
+    },
     "workbench.editorAssociations": {
         "*.pdf": "pdf.preview"
     },
     "git.openRepositoryInParentFolders": "never",
-    "cmake.showOptionsMovedNotification": false,
+    "git.autofetch": true,
     "extensions.ignoreRecommendations": true,
     "lldb.showDisassembly": "never",
     "files.autoSave": "afterDelay",
-    "editor.stickyTabStops": true,
-    "editor.autoIndent": "advanced",
-    "editor.indentSize": "tabSize",
-
+    // cursor settings
+    "editor.cursorStyle": "block",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
     //vim settings
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -119,21 +140,23 @@
             "<C-a>": false,
             "<C-f>": false
     },
-    "C_Cpp.default.cppStandard": "c++23",
-    "C_Cpp.default.cStandard": "c23",
-    "C_Cpp.autocompleteAddParentheses": true,
     "vim.commandLineModeKeyBindingsNonRecursive": [
     ],
-    "github.copilot.editor.enableAutoCompletions": true,
-    "editor.fontSize": 14,
-    "editor.accessibilityPageSize": 12,
-    "window.zoomLevel": 2,
+    // cpp standard
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/**",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+    ],
     "diffEditor.maxComputationTime": 0,
-    "typescript.tsserver.watchOptions": {
-        
-
-    },
-    
     "latex-workshop.latex.tools": [
     {
         "name": "xelatex",
@@ -146,56 +169,65 @@
         ]
     }
     ],
+    // terminal settings
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.profiles.osx": {
         "fish": {
-        "path": "/usr/bin/fish" // 如果你是 Apple Silicon (M1/M2/M3)
-        // "path": "/usr/local/bin/fish" // 如果你是 Intel Mac
+        "path": "/usr/bin/fish" 
+        // "path": "/usr/local/bin/fish"
         }
     },
-    /*
-    "background.enabled": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.inheritEnv": false,
+    
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/rynne/OneDrive/Pictures/VSCodeLogo/code_logo.css"
+    ],
+    "background.enabled" : true,
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_6.jpg"],
+        "interval": 0,
+        "random": false
+    },
     "background.panel": {
         "useFront": true,
-        "images": ["file:///C:/Users/19680/Pictures/02.jpg"],
-        "opacity": 0.08,
-        "width": "100%",
-        "height": "100%",
-        "backgroundSize": "cover",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat"
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02.jpg"],
+        "interval": 0,
+        "random": false
     },
     "background.sidebar": {
         "useFront": true,
-        "images": ["file:///C:/Users/19680/Pictures/02_6.jpg"],
-        "opacity": 0.08,
-        "width": "100%",
-        "height": "100%",
-        "backgroundSize": "cover",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat"
+        "style": {
+            "background-position": "100% 100%",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_5.jpg"],
+        "interval": 0,
+        "random": false
     },
-    */
-    //"workbench.colorCustomizations": {"editor.background": "#282727"},
-    "terminal.integrated.fontSize": 14,
-    "git.autofetch": true,
-    "background.editorBackgrounds": [
-        "/C:/Users/19680/Pictures/02_3.jpg"
-    ],
-    "background.panelBackgrounds": [
-        "/C:/Users/19680/Pictures/02.jpg"
-    ],
-    "background.sidebarBackgrounds": [
-        "/C:/Users/19680/Pictures/02_6.jpg"
-    ],
-    "background.backgroundOpacity": [
-        0.06,
-        0.05,
-        0.06,
-        0.06
-    ],
-    "background.autoInstall": true,
-    "background.renderContentAboveBackground": true,
-    "background.smoothImageRendering": true,
-    "vscode_custom_css.imports": ["file:///C:/Users/19680/Pictures/VSCodeLogo/code_logo.css"]
+    "workbench.startupEditor": "none",
+    // copilot settings
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": true
+    }
 }
