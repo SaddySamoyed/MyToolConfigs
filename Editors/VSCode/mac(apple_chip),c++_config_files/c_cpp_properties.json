@@ -4,21 +4,23 @@
             "name": "Mac",
             "includePath": [
                 "${default}",
-                "/opt/homebrew/opt/llvm/include/c++/v1",
-                "/opt/homebrew/opt/llvm/lib/clang/20/include",
+                "${workspaceFolder}/**",
+                "/opt/homebrew/include",
+                "/opt/homebrew/Cellar/boost/1.88.0/include",
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
             ],
             "defines": [
+                "_DEBUG",
                 "_XOPEN_SOURCE=700"
             ],
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
             ],
-            "compilerPath": "/opt/homebrew/opt/llvm/bin/clang++",
+            "compilerPath": "/opt/homebrew/opt/llvm/bin/clang++",  
             "cStandard": "c23",
             "cppStandard": "c++23",
-            "intelliSenseMode": "macos-clang-arm64"
+            "intelliSenseMode": "macos-clang-arm64"  // Intel Mac 用 "macos-clang-x64"
         }
     ],
     "version": 4
