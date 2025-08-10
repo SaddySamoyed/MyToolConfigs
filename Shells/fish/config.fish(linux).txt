@@ -51,7 +51,7 @@ set -Ux CONDA_PREFIX ""
 set -Ux CONDA_DEFAULT_ENV ""
 set -Ux CONDA_PROMPT_MODIFIER ""
 # 添加 conda 初始化脚本到 config.fish
-echo 'source /home/rynne/miniconda3/etc/fish/conf.d/conda.fish' >> ~/.config/fish/config.fish
+source /home/rynne/miniconda3/etc/fish/conf.d/conda.fish
 eval (/home/rynne/miniconda3/bin/conda shell.fish hook)
 
 
@@ -98,5 +98,13 @@ function gcc --wraps gcc-13
     command gcc-13 $argv
 end
 
+# =============================== boost library ===============================
+# Boost + GCC 正确 include path
+#set -Ux CPLUS_INCLUDE_PATH \
+#    /usr/lib/gcc/x86_64-linux-gnu/13/include \
+#    /usr/include/x86_64-linux-gnu \
+#    /usr/include
 
-source /home/rynne/miniconda3/etc/fish/conf.d/conda.fish
+#set -Ux LIBRARY_PATH /lib/x86_64-linux-gnu $LIBRARY_PATH
+#set -Ux LD_LIBRARY_PATH /lib/x86_64-linux-gnu $LD_LIBRARY_PATH
+# =============================== end boost library ===============================
