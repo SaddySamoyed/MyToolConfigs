@@ -179,18 +179,22 @@
     },
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.inheritEnv": false,
-    
     "vscode_custom_css.imports": [
         "file:///C:/Users/rynne/OneDrive/Pictures/VSCodeLogo/code_logo.css"
     ],
+    "vscode_custom_css.statusbar": true,
     "background.enabled" : true,
     "background.editor": {
         "useFront": true,
         "style": {
-            "background-position": "100% 100%",
-            "background-size": "auto",
+            "content": "",
+            "pointer-events": "none",
+            "background-size": "cover", 
+            "background-repeat": "no-repeat",
+            "background-position": "center",
             "opacity": 0.05
         },
+        "size": "cover",
         // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
         "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_6.jpg"],
         "interval": 0,
@@ -199,7 +203,8 @@
     "background.panel": {
         "useFront": true,
         "style": {
-            "background-position": "100% 100%",
+            "background-position":"center",
+            "background-repeat": "no-repeat",
             "background-size": "auto",
             "opacity": 0.05
         },
@@ -211,7 +216,8 @@
     "background.sidebar": {
         "useFront": true,
         "style": {
-            "background-position": "100% 100%",
+            "background-position":"center",
+            "background-repeat": "no-repeat",
             "background-size": "auto",
             "opacity": 0.05
         },
@@ -229,5 +235,104 @@
         "markdown": false,
         "scminput": false,
         "cpp": true
-    }
-}
+    },
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "makefile.configureOnOpen": true,
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatUserActionRequired": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.nextEditSuggestion": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "on"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off"
+    },
+}  
