@@ -173,53 +173,142 @@
         // "path": "/usr/local/bin/fish" // 如果你是 Intel Mac
         }
     },
-    /*
     "background.enabled": true,
     "background.panel": {
         "useFront": true,
         "images": ["file:///Users/fanqiulin/Documents/Photos/02.jpg"],
-        "opacity": 0.08,
-        "width": "100%",
-        "height": "100%",
-        "backgroundSize": "cover",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat"
+        "style": {
+            "background-position": "center",
+            "background-repeat": "no-repeat",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        "interval": 0,
+        "random": false
     },
     "background.sidebar": {
         "useFront": true,
-        "images": ["file:///Users/fanqiulin/Documents/Photos/02_6.jpg"],
-        "opacity": 0.08,
-        "width": "100%",
-        "height": "100%",
-        "backgroundSize": "cover",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat"
+        "style": {
+            "background-position": "center",
+            "background-repeat": "no-repeat",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        "images": ["file:///Users/fanqiulin/Documents/Photos/02_5.jpg"],
+        "interval": 0,
+        "random": false
     },
-    */
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "content": "",
+            "pointer-events": "none",
+            "background-position": "center",
+            "background-repeat": "no-repeat",
+            "background-size": "cover",
+            "opacity": 0.05
+        },
+        "images": ["file:///Users/fanqiulin/Documents/Photos/02_6.jpg"],
+        "interval": 0,
+        "random": false
+    },
     //"workbench.colorCustomizations": {"editor.background": "#2E3440"}, // nord
     "terminal.integrated.fontSize": 13,
     "terminal.external.osxExec": "iTerm.app",
-    "background.windowBackgrounds": [],
-    "background.editorBackgrounds": [
-        "/Users/fanqiulin/Documents/Photos/02_6.jpg"
-    ],
-    "background.autoInstall": true,
-    "background.settingScope": "Global",
-    "background.sidebarBackgrounds": [
-        "/Users/fanqiulin/Documents/Photos/02_7.jpg"
-    ],
-    "background.panelBackgrounds": [
-        "/Users/fanqiulin/Documents/Photos/02.jpg"
-    ],
-    "background.backgroundOpacity": [
-        0.1,
-        0.05,
-        0.1,
-        0.1
-    ],
-    "background.smoothImageRendering": true,
-    "background.renderContentAboveBackground": true,
-    "vscode_custom_css.imports": [
-        "file:///Users/fanqiulin/Documents/Photos/VSCodeLogo/code_logo.css"
-    ]
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": true
+    },
+    "workbench.startupEditor": "none",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatUserActionRequired": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off"
+    },
+    "accessibility.signals.nextEditSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off"
+    }
 }
