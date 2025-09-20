@@ -36,6 +36,17 @@ sudo vim /etc/shells
 
 
 
+或者直接
+```shell
+grep -qxF '/usr/bin/fish' /etc/shells || echo '/usr/bin/fish' | sudo tee -a /etc/shells
+```
+
+
+
+
+
+
+
 然后我们使用这个指令, 把 fish 调为默认 shell 
 
 ```shell
