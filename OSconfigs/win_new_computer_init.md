@@ -248,7 +248,7 @@ conda install anaconda-navigator
 
  
 
-### step 11: 其他常用软件: powertoy 等
+### step 11: 其他功能性软件: powertoy 等
 
 我的话会下一个 mathpix 快速公式转 latex/md 的工具
 
@@ -300,3 +300,25 @@ conda install anaconda-navigator
 4. 启动一下独显直连. 核显还是不用好
 
 这样我的开机时内存占用率就从 60% 降低到了 25%. 
+
+
+
+### step 13: 生产力
+
+反正我是不可能用 office 的
+
+已经有 typora 了那轻量的 note taking 没问题了; 
+
+重量的 note taking: 一般 overleaf. 但是我会习惯本地也下载一个 texlive 并简单配置一下环境. 我的本地配置在 `Latex/MyLocalConfig` 里
+
+excel 可以用 VSCode 来看. 咱们不从事 excel 相关工作没必要.
+
+
+
+应急像素图绘制: Pixel Studio, steam 下载
+
+音频剪辑: ocenaudio, 免费开源
+
+
+
+最后下个 Blender, Unity Hub, Rider 做游戏开发.

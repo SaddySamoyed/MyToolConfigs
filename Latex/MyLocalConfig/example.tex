@@ -1,0 +1,32 @@
+\documentclass{book}
+
+% 字体（LuaLaTeX）
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}
+\setsansfont{Noto Sans CJK SC}
+
+% 数学
+\usepackage{amsmath, amssymb}
+
+% tcolorbox + theorems 库
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+% 定义定理环境
+\newtcbtheorem[number within=chapter]{theorem}{定理}%
+  {colback=blue!5!white, colframe=blue!75!black, fonttitle=\bfseries}{th}
+
+% 定义例子环境
+\newtcbtheorem[number within=chapter]{example}{例子}%
+  {colback=orange!5!white, colframe=orange!85!black, fonttitle=\bfseries}{ex}
+
+\begin{document}
+
+\chapter{绪论}
+\section{背景介绍}
+\begin{theorem}
+AAA
+\end{theorem}
+
+
+\end{document}
