@@ -322,3 +322,12 @@ excel 可以用 VSCode 来看. 咱们不从事 excel 相关工作没必要.
 
 
 最后下个 Blender, Unity Hub, Rider 做游戏开发.
+
+
+
+
+### extra: nvdia 驱动
+
+记得重新装一下
+
+不然多显示器可能出问题

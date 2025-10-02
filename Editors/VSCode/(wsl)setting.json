@@ -179,10 +179,6 @@
     },
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.inheritEnv": false,
-    "vscode_custom_css.imports": [
-        "file:///C:/Users/rynne/OneDrive/Pictures/VSCodeLogo/code_logo.css"
-    ],
-    "vscode_custom_css.statusbar": true,
     "background.enabled" : true,
     "background.editor": {
         "useFront": true,
@@ -335,4 +331,13 @@
     "accessibility.signals.terminalCommandSucceeded": {
         "sound": "off"
     },
+    "remote.autoForwardPortsSource": "hybrid",
+    "python.createEnvironment.trigger": "off",
+    "notebook.output.textLineLimit": 20,
+    "remote.SSH.remotePlatform": {
+        "192.168.253.128": "linux"
+    },
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    // disable indent-rainbow error highlight
+    "indentRainbow.errorColor": "rgba(0,0,0,0)",
 }  
