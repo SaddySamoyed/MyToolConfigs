@@ -10,7 +10,7 @@ which fish
 显示出
 
 ```shell
-/opt/homebrew/bin/fish   # for Apple Silicon
+/opt/homebrew/bin/fish   # for Apple Silicon. /usr/bin/bash for linux
 ```
 
 
