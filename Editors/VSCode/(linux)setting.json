@@ -1,0 +1,336 @@
+{
+    // theme
+    "workbench.colorTheme": "Atom One Dark",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13",
+    // editor interface
+    "editor.accessibilitySupport": "on",
+    "editor.fontSize": 14,
+    "editor.accessibilityPageSize": 12,
+    "editor.stickyTabStops": true,
+    "editor.autoIndent": "advanced",
+    "editor.indentSize": "tabSize",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+            "scope": [
+                "comment",
+                "comment.block.documentation",
+                "comment.block",
+                "comment.line.double-slash"
+            ],
+            "settings": {
+                "foreground": "#319131",  // 绿色
+                "fontStyle": ""           // 可设置为 "italic" 或 "bold" 看个人喜好
+            }
+            }
+        ]
+    },
+    "workbench.editorAssociations": {
+        "*.pdf": "pdf.preview"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "git.autofetch": true,
+    "extensions.ignoreRecommendations": true,
+    "lldb.showDisassembly": "never",
+    "files.autoSave": "afterDelay",
+    // cursor settings
+    "editor.cursorStyle": "block",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    //vim settings
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<Shift>", "x"],
+            "after": ["<Esc>"]
+        },
+        {
+           "before": ["<S-x>", "<S-c>"], // <shift-x>+<shift-c> 进入 normal mode
+            "after": ["<Esc>"]         
+        }
+    ],
+    
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {  
+            "before": ["<Space>"],  // <Space> 进入 insert mode
+            "after": ["i"]
+        },
+        {
+            "before": ["<S-v>"],  // <Shift+v> 进入 visual mode
+            "after": ["v"]
+        },
+        {
+            "before": ["v"],
+            "after": []  //禁用v
+        },
+        {  
+            "before": ["i"], 
+            "after": []  // 禁用i
+        }, 
+        {
+           "before": ["a"],
+            "after": ["b"] 
+        },
+        {
+           "before": ["d"],
+            "after": ["w"] 
+        },
+        {
+           "before": ["w"],
+            "after": ["k"] 
+        }, 
+        {
+           "before": ["s"],
+            "after": ["j"] 
+        }, 
+        {
+            "before": ["l", "l"],  // 按下 'l' 两次
+            "after": ["d", "d"]    // 映射到 'dd' 命令
+        },
+        {
+        "key": "ctrl+c",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        },
+        {
+        "key": "ctrl+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        },
+        {
+        "key": "ctrl+c",
+        "command": "extension.vim_ctrl+c",
+        "when": "!editorTextFocus"
+        },
+        {
+        "key": "ctrl+v",
+        "command": "extension.vim_ctrl+v",
+        "when": "!editorTextFocus"
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<S-x>", "<S-c>"],  //<shift-x>+<shift-c> 进入normal mode
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<backspace>"], // <backspace> 表示整段删除, 原本c的作用
+            "after": ["c"]
+        },
+        {
+            "before": ["c"], // 禁用 c
+            "after": []
+        },
+        {
+            "before": ["<Space>"], // <Space 进入 insert mode
+            "after": ["I"]
+        }
+    ],  
+    "vim.handleKeys": {
+        
+
+            "<C-a>": false,
+            "<C-f>": false
+    },
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    ],
+    // cpp standard
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/**",
+        ],
+    "diffEditor.maxComputationTime": 0,
+    "latex-workshop.latex.tools": [
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+        ]
+    }
+    ],
+    // terminal settings
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+        "path": "/usr/bin/fish" 
+        // "path": "/usr/local/bin/fish"
+        }
+    },
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.inheritEnv": false,
+    "background.enabled" : true,
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "content": "",
+            "pointer-events": "none",
+            "background-size": "cover", 
+            "background-repeat": "no-repeat",
+            "background-position": "center",
+            "opacity": 0.05
+        },
+        "size": "cover",
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///home/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/02_6.jpg"],
+        "interval": 0,
+        "random": false
+    },
+    "background.panel": {
+        "useFront": true,
+        "style": {
+            "background-position":"center",
+            "background-repeat": "no-repeat",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///home/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/02.jpg"],
+        "interval": 0,
+        "random": false
+    },
+    "background.sidebar": {
+        "useFront": true,
+        "style": {
+            "background-position":"center",
+            "background-repeat": "no-repeat",
+            "background-size": "auto",
+            "opacity": 0.05
+        },
+        // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+        "images": ["file:///home/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/rukia.jpg"],
+        "interval": 0,
+        "random": false
+    },
+    "workbench.startupEditor": "none",
+    // copilot settings
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": true
+    },
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "makefile.configureOnOpen": true,
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatUserActionRequired": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.nextEditSuggestion": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "on"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off"
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "notebook.output.textLineLimit": 20,
+    "remote.SSH.remotePlatform": {
+        "192.168.253.128": "linux"
+    },
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "indentRainbow.errorColor": "rgba(0,0,0,0)"
+}
