@@ -14,6 +14,12 @@
 
 所以不是要重置电脑, 而是要直接重新安装系统, 在一开始就空余出一片未分配区域.
 
+
+
+**当然, 如果有一个多余的硬盘槽, 请忽略下面的重新安装 win 11.**
+
+
+
 ## 重新安装 win 11, 定制
 
 记得备份一下本地文件, if you like
@@ -45,7 +51,7 @@
 
 
 
-### 重启进入 bios 下载
+### 重启进入 bios 安装
 
 开机按 `F2`/`Del`/`Esc`/`F12` 进入 bios 后:
 
@@ -134,3 +140,160 @@ wmic csproduct get name
 
 
 
+
+
+
+
+## 在未分配区域上安装 Ubuntu
+
+### 制作启动盘
+
+一样.
+
+- 下载 Ubuntu ISO ([Ubuntu 官方网站](https://ubuntu.com/download/desktop)).
+
+- 用 **Rufus** 或 **Ventoy** 制作启动盘。
+
+  - 选择 ISO 文件
+
+  - 分区类型: GPT
+
+    目标系统: UEFI
+
+  - 文件系统: FAT32 (和 win 不同)
+
+
+
+### 重启进入 bios 安装
+
+#### 关 BitLocker
+
+在重启前记得: 一定要把 windows 的 BitLocker 加密关掉. 当 Windows 的系统盘 (通常是 `C:`) 或 EFI 分区 被 BitLocker 加密时, Ubuntu 安装器无法安全修改分区表或引导设置
+
+1. 打开控制面板 → “系统和安全” → “BitLocker 驱动器加密”
+
+2. 在 “操作系统驱动器 (C:)” 一栏中，你会看到：
+
+   ```
+   BitLocker 状态: 已开启
+   ```
+
+   点击关闭 BitLocker, 确认 → 系统开始解密
+    这一步可能需要 5–20 分钟 (取决于 SSD 容量)
+
+你会看到 “正在解密驱动器...”，解密完成后会显示：
+
+```
+BitLocker 已关闭
+```
+
+
+
+然后可以开始安装了
+
+#### 配置 bios
+
+重启 f2 进入 bios
+
+注意这里我们要小心一点了. 现在我们的硬盘里已经有一个系统了, 要是搞错了之前就白搞了
+
+检查以下设置.
+
+- ✅ `SVM` (AMD-V) 或 `Intel VT-x` **Enabled**
+- `Secure Boot` **Disabled**
+- `Fast Boot` 也 **Disabled**
+- ✅ `Boot Mode` 设置为 **UEFI**
+
+然后 Save & Exit 离开 bios.
+
+
+
+接下来, 马上连续按启动菜单键. ROG 是 **`F12`** 或 **`Esc`**.
+
+在 please select boot device 中选择 UEFI: Memore x USB….
+
+然后可以启动菜单：
+
+```
+Try or Install Ubuntu
+Ubuntu (safe graphics)
+Boot from next volume
+UEFI Firmware Settings
+```
+
+1. 用方向键选 **Try or Install Ubuntu**, Enter
+2. 之后会显示 Ubuntu 的 logo加载几秒
+
+
+
+ps: 这里图形显示有可能出问题, 就是屏幕上只剩一个鼠标, 没进入 Ubuntu 的紫色桌面. 这种情况长按重启就好了
+
+
+
+
+
+#### 安装 Ubuntu
+
+然后开始安装 Ubuntu. 这里我们知道: 必须安装在未分配区域别和 windows 冲突了. 这个等一会儿会选
+
+先看到 Ubuntu 安装的引导界面, 选择 language, keyboard layout, network 等等
+
+然后关键一步:  disk setup
+
+一定选择: 
+
+- Install Ubuntu alongside Windows Boot Manager
+
+而不是 erase disk.
+
+
+
+选择之后, 就会进入创建 account.
+
+注意: Ubuntu 的安装器 (`Ubiquity` 或 24.04 之后的 `Subiquity`) 会根据磁盘状态自动判断：
+
+- 如果它检测到一块**连续的未分配空间 (unallocated space)**, 并且空间足够大 (≥ 35 GB), 就会**自动选择把 Ubuntu 安装到那块未分配区**, 而不再询问你要分多少.
+
+就是说我们不用担心. Ubuntu 是装在了我们之前分割出来的未分配区域上了. 它自己会在未分配空间中新建 2–3 个分区：
+
+- `ext4` (挂载点 `/`)
+- 可能的 `swap`
+- 可选的 `/home`
+
+
+
+共享 Windows 的 EFI 引导分区 (不会破坏原内容, 只是增加一条 “ubuntu” 启动项)
+
+所以 Windows 的文件, 分区, 系统启动都不会受到影响
+
+
+
+
+
+
+
+
+
+## Further 说明: 
+
+我们安装完 Ubuntu 之后, Ubuntu 的 boot priority 会高于 windows boot manager. 
+
+之后每次我们开机, 都会进入 Ubuntu 的启动管理器 **GRUB (GNU GRand Unified Bootloader)**.
+
+```
+GNU GRUB version 2.12
+
+Ubuntu
+Advanced options for Ubuntu
+Windows Boot Manager (on /dev/nvme0n1p1)
+```
+
+这个菜单默认在启动时出现 5–10 秒, 让你选择进入：
+
+- **Ubuntu** (默认选项)
+- **Windows Boot Manager** (回到 Windows)
+
+这个菜单比较卡也很正常, 因为在 UEFI 阶段会初始化大量 PCIe 设备、NVMe、独显、键盘背光等等
+ GRUB 菜单显示在这个阶段之上, 所以:
+
+> 键盘事件和画面刷新需要等待固件响应，导致输入延迟 1~2 秒
