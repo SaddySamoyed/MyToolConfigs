@@ -192,7 +192,7 @@
         },
         "size": "cover",
         // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
-        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_6.jpg"],
+        "images": ["file:///C:/Users/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/02_6.jpg"],
         "interval": 0,
         "random": false
     },
@@ -205,7 +205,7 @@
             "opacity": 0.05
         },
         // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
-        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02.jpg"],
+        "images": ["file:///C:/Users/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/02.jpg"],
         "interval": 0,
         "random": false
     },
@@ -218,7 +218,7 @@
             "opacity": 0.05
         },
         // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
-        "images": ["file:///C:/Users/rynne/OneDrive/Pictures/02_5.jpg"],
+        "images": ["file:///C:/Users/qiulin/Documents/Github/MyToolConfigs/OSconfigs/wallpapers/rukia.jpg"],
         "interval": 0,
         "random": false
     },
@@ -332,7 +332,6 @@
         "sound": "off"
     },
     "remote.autoForwardPortsSource": "hybrid",
-    "python.createEnvironment.trigger": "off",
     "notebook.output.textLineLimit": 20,
     "remote.SSH.remotePlatform": {
         "192.168.253.128": "linux"
@@ -340,4 +339,4 @@
     "diffEditor.hideUnchangedRegions.enabled": true,
     // disable indent-rainbow error highlight
     "indentRainbow.errorColor": "rgba(0,0,0,0)",
-}  
+}
