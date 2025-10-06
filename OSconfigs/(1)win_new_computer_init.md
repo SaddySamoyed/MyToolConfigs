@@ -72,6 +72,7 @@ https://www.rw-designer.com/cursor-set/hollow-knight
 
 ```shell
 wsl --install
+wsl --install -d Ubuntu-24.04
 ```
 
 然后赶紧切 bash 下载指令
