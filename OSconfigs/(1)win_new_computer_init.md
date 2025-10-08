@@ -125,7 +125,6 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 # Tab → 切换下一个预测
 Set-PSReadLineKeyHandler -Key Tab -Function NextSuggestion
-Set-PSReadLineKeyHandler -Key UpArrow   -Function PreviousSuggestion
 
 # Set-PSReadLineOption -PredictionViewStyle InlineView
 
