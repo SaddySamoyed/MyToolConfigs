@@ -30,7 +30,7 @@ BTW 不止买电脑. 我感觉也可以作为一个配置备忘录以防忘记�
 
 
 
-### step 4: wallpaper engine, 以及换 cursor
+### step 4: wallpaper engine, 换 cursor 等等外观
 
 很 personal. 我的第三件事情是下 steam 然后下 wallpaper engine. 不用自己常用的壁纸真的很难使用这个电脑.
 
@@ -48,46 +48,7 @@ https://www.rw-designer.com/cursor-set/hollow-knight
 
 
 
-
-
-### step 5: github desktop
-
-个人习惯把很多 settings 的 config 文件都在 github desktop, 所以接下来会下一个 github desktop
-
-
-
-### step 6: 更改一下 file explorer 的文件布局
-
-我的习惯是: medium icon, group by type, show filename extension 和hidden items
-
-然后点击上面三个点 -> options -> view -> 把当前的布局应用到全部文件夹
-
-
-
-### step 5: wsl 下载
-
-最重要的就是先把 wsl 下了.
-
-先在 control panel 中 -> windows features -> turn windows features on or off -> 开启 WSL 和虚拟机平台
-
-```shell
-wsl --install
-wsl --install -d Ubuntu-24.04
-```
-
-然后赶紧切 bash 下载指令
-
-```shell
-sudo apt update
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo apt install g++-13 make rsync wget git ssh gdb tree
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 100
-sudo update-alternatives --config g++
-```
-
-
-
-### step 6: VSCode, typora, sublime
+### step 5: VSCode, typora, sublime
 
 赶紧下个 VSCode 然后连接一下 wsl. 以及同步一下同系统之前保存好的 setting.json 文件
 
@@ -127,13 +88,111 @@ Windows Registry Editor Version 5.00
 
 
 
-### step 7: 下一下 google drive 和 dropbox, 同步一下文件
+### step 6: github desktop
+
+个人习惯把很多 settings 的 config 文件都在 github desktop, 所以接下来会下一个 github desktop
+
+
+
+### step 7: 更改一下 file explorer 的文件布局
+
+我的习惯是: medium icon, group by type, show filename extension 和hidden items
+
+然后点击上面三个点 -> options -> view -> 把当前的布局应用到全部文件夹
+
+
+
+### step 8: 下个新版 powershell
+
+老版的太不智能了. powershell 7 还挺不错的
+
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5
+
+可以自己配置 config.
+
+```
+code  C:\Users\username\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+
+我的 config:
+
+```shell
+Import-Module PSReadLine
+
+# 启用预测补全
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView
+
+# Tab → 切换下一个预测
+Set-PSReadLineKeyHandler -Key Tab -Function NextSuggestion
+Set-PSReadLineKeyHandler -Key UpArrow   -Function PreviousSuggestion
+
+# Set-PSReadLineOption -PredictionViewStyle InlineView
+
+# # 上下箭头切换预测项
+# Set-PSReadLineKeyHandler -Key DownArrow -Function NextSuggestion
+# Set-PSReadLineKeyHandler -Key UpArrow -Function PreviousSuggestion
+
+
+# # 记录上次 Tab 的时间
+# $global:lastTabTime = [datetime]::MinValue
+
+# # 自定义 Tab 行为: 单击 Tab 接受一个词, 快速双击 Tab 接受整句
+# Set-PSReadLineKeyHandler -Key Tab `
+#     -BriefDescription "Smart Tab Accept" `
+#     -ScriptBlock {
+#         $now = Get-Date
+#         $delta = ($now - $global:lastTabTime).TotalMilliseconds
+#         $global:lastTabTime = $now
+
+#         if ($delta -lt 400) {
+#             # 400ms 内连续两次 Tab → 接受整句
+#             [Microsoft.PowerShell.PSConsoleReadLine]::AcceptSuggestion()
+#         } else {
+#             # 第一次 Tab → 接受下一个词
+#             [Microsoft.PowerShell.PSConsoleReadLine]::AcceptNextSuggestionWord()
+#         }
+#     }
+
+
+```
+
+下面注释掉的是 Inline 模式的. 目前用的是 listview 模式的
+
+
+
+### step 9: wsl 下载
+
+最重要的就是先把 wsl 下了.
+
+先在 control panel 中 -> windows features -> turn windows features on or off -> 开启 WSL 和虚拟机平台
+
+```shell
+wsl --install
+wsl --install -d Ubuntu-24.04
+```
+
+然后赶紧切 bash 下载指令
+
+```shell
+sudo apt update
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+sudo apt install g++-13 make rsync wget git ssh gdb tree
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 100
+sudo update-alternatives --config g++
+```
+
+
+
+
+
+### step 10: 下一下 google drive 和 dropbox, 同步一下文件
 
 cloud drive 可以同步一下老电脑的 desktop 和 documents
 
 
 
-### step 8: 切个顺手的 shell
+### step 11: 给 wsl 切个顺手的 shell
 
 我切下 fish
 
@@ -168,7 +227,7 @@ sudo code ~/.config/fish/config.fish
 
 
 
-### step 9: 配置一下 github 需要用到的 ssh
+### step 12: wsl 配置一下 github 需要用到的 ssh
 
 ```shell
 sudo apt install openssh-client
@@ -181,7 +240,7 @@ cat ~/.ssh/id_ed25519.pub
 
 
 
-### stp10: 配置一下常用 scripting language 的环境
+### step13: 配置一下常用 scripting language 的环境
 
 scripting language 还是非常必要的
 
@@ -249,7 +308,7 @@ conda install anaconda-navigator
 
  
 
-### step 11: 其他功能性软件: powertoy 等
+### step 14: 其他功能性软件: powertoy 等
 
 我的话会下一个 mathpix 快速公式转 latex/md 的工具
 
@@ -261,7 +320,7 @@ conda install anaconda-navigator
 
 
 
-然后充电情况检测: HwiNFO
+充电情况检测: HwiNFO. 对于支持 typec 口充电的而言比较有用.
 
 
 
@@ -270,7 +329,7 @@ conda install anaconda-navigator
 
 
 
-### step 12: memory management
+### step 15: memory management
 
 内存管理. 还是挺重要的
 
@@ -304,7 +363,7 @@ conda install anaconda-navigator
 
 
 
-### step 13: 生产力
+### step 16: 生产力
 
 反正我是不可能用 office 的
 
@@ -322,13 +381,11 @@ excel 可以用 VSCode 来看. 咱们不从事 excel 相关工作没必要.
 
 
 
-最后下个 Blender, Unity Hub, Rider 做游戏开发.
-
 
 
 
 ### extra: nvdia 驱动
 
-记得重新装一下
+记得重新装一下. 根据机型找官网的驱动 
 
 不然多显示器可能出问题
